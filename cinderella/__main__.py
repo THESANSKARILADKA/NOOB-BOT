@@ -30,7 +30,7 @@ PM_START_TEXT = """
 _Hello_ *{}*
 _My name is_ *{}*
 A pero manager to control your groups.
-Made with love by [them](https://t.me/teamdarkcobra)
+Made with love by [Them❣](https://t.me/teamdarkcobra)
 """
 
 
@@ -180,8 +180,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🛡Creator🛡",url="https://t.me/teamdarkcobra")]]
-    keyboard += [[InlineKeyboardButton(text="🌐Support Group",url="https://t.me/Dark_cobra_suppor_group"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🛡Channel🛡",url="https://t.me/Dark_cobra_support")]]
+    keyboard += [[InlineKeyboardButton(text="🌐Support Group",url="https://t.me/Dark_cobra_support_group"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
